@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- supplier表 -->
+<mapper namespace="com.histore.db2.dao.MoneyDao">
+
+    <select id="findMoneyById" resultType="com.histore.db2.Money">
+        SELECT * FROM money WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="com.histore.db2.Money">
+        INSERT INTO money (`basic`, `reward`, `punishment`) VALUES (#{basic},#{reward},#{punishment})
+    </insert>
+</mapper>

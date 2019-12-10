@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- supplier表 -->
+<mapper namespace="com.histore.db1.dao.UserDao">
+
+    <select id="findUserByName" resultType="com.histore.db1.User">
+        SELECT * FROM user WHERE name = '庆余年'
+    </select>
+
+    <insert id="insert" parameterType="com.histore.db1.User">
+        INSERT INTO `user` ( `name`, `age`, `money`) VALUES (#{name},#{age},#{money})
+    </insert>
+</mapper>
